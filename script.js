@@ -46,19 +46,38 @@ document.getElementById("bookingForm").addEventListener("submit", function (e) {
 
     this.reset();
 });
-// Modal Functions
-function openModal() {
-    document.getElementById("featuresModal").style.display = "block";
-}
 
-function closeModal() {
-    document.getElementById("featuresModal").style.display = "none";
-}
+// Scroll Animation with Intersection Observer
+document.addEventListener('DOMContentLoaded', function () {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-// Close modal when clicking outside of it
-window.onclick = function (event) {
-    const modal = document.getElementById("featuresModal");
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Get the index position of the element
+                const allAnimateElements = document.querySelectorAll('.scroll-animate');
+                let elementIndex = 0;
+                for (let i = 0; i < allAnimateElements.length; i++) {
+                    if (allAnimateElements[i] === entry.target) {
+                        elementIndex = i;
+                        break;
+                    }
+                }
+
+                // Apply animation with staggered delay
+                const delay = elementIndex * 0.15;
+                entry.target.style.animation = `scrollFadeIn 0.8s ease forwards ${delay}s`;
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all scroll-animate elements
+    document.querySelectorAll('.scroll-animate').forEach(element => {
+        observer.observe(element);
+    });
+});
+
