@@ -36,8 +36,6 @@
                 data-hi="प्रीमियम बागों और बैंक्वेट हॉल बुकिंग प्लेटफॉर्म">Premium Gardens & Banquet Halls Booking
                 Platform</p>
             <a href="#booking" class="hero-btn" data-en="Book Now" data-hi="अभी बुक करें">Book Now</a>
-            <button class="features-btn" onclick="openModal()" data-en="✨ View Features" data-hi="✨ विशेषताएं देखें">✨
-                View Features</button>
         </div>
     </section>
 
@@ -49,9 +47,46 @@
             you find and book the best gardens and banquet halls easily.</p>
     </section>
 
+    <!-- Features Section -->
+    <section class="features">
+        <h2 data-en="✨ Why Choose My Utsave? ✨" data-hi="✨ मेरे Utsave को क्यों चुनें? ✨">✨ Why Choose My Utsave? ✨</h2>
+        <div class="features-container">
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">🔍</div>
+                <h3 data-en="Search Best Gardens & Banquet Halls" data-hi="🔍 सर्वश्रेष्ठ बागों और बैंक्वेट हॉल खोजें">
+                    🔍 Search Best Gardens & Banquet Halls</h3>
+                <p data-en="Discover premium venues curated just for you. Browse through the best gardens and banquet halls in your city."
+                    data-hi="आपके लिए चयनित प्रीमियम स्थान खोजें। अपने शहर में सर्वश्रेष्ठ बागों और बैंक्वेट हॉल देखें।">
+                    Discover premium venues curated just for you. Browse through the best gardens and banquet halls in
+                    your city.</p>
+            </div>
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">⏱️</div>
+                <h3 data-en="Save Your Time" data-hi="⏱️ अपना समय बचाएं">⏱️ Save Your Time</h3>
+                <p data-en="No more endless searching and visiting venues. Book your perfect venue in just a few clicks!"
+                    data-hi="अब और अंतहीन खोज नहीं। अपने आदर्श स्थान को कुछ क्लिकों में बुक करें!">No more endless
+                    searching and visiting venues. Book your perfect venue in just a few clicks!</p>
+            </div>
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">📢</div>
+                <h3 data-en="Instant Publicity" data-hi="📢 तुरंत प्रचार">📢 Instant Publicity</h3>
+                <p data-en="Reach thousands of couples looking for perfect venues. Get maximum visibility for your events."
+                    data-hi="हजारों जोड़ों तक पहुंचें जो सही स्थान ढूंढ रहे हैं। अपने आयोजनों के लिए अधिकतम दृश्यता प्राप्त करें।">
+                    Reach thousands of couples looking for perfect venues. Get maximum visibility for your events.</p>
+            </div>
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">✅</div>
+                <h3 data-en="Verified Venues" data-hi="✅ सत्यापित स्थान">✅ Verified Venues</h3>
+                <p data-en="All our venues are verified and trusted. Host your dream event with complete peace of mind."
+                    data-hi="हमारे सभी स्थान सत्यापित और विश्वस्त हैं। पूर्ण मानसिक शांति के साथ अपने स्वप्न का कार्यक्रम आयोजित करें।">
+                    All our venues are verified and trusted. Host your dream event with complete peace of mind.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Venues Section -->
     <section class="venues">
-        <div class="venue-card">
+        <div class="venue-card scroll-animate">
             <img src="garden.jpg" alt="Garden">
             <h3 data-en="Luxury Gardens" data-hi="विलासितापूर्ण बागान">Luxury Gardens</h3>
             <p data-en="Perfect for weddings & outdoor celebrations."
@@ -59,7 +94,7 @@
             <button onclick="selectVenue('Garden')" data-en="Book Garden" data-hi="बाग बुक करें">Book Garden</button>
         </div>
 
-        <div class="venue-card">
+        <div class="venue-card scroll-animate">
             <img src="banquet.jpg" alt="Banquet">
             <h3 data-en="Royal Banquet Halls" data-hi="शाही बैंक्वेट हॉल">Royal Banquet Halls</h3>
             <p data-en="Elegant indoor halls for grand events."
@@ -128,43 +163,7 @@
         <div class="whatsapp-tooltip">Click here for WhatsApp Group</div>
     </div>
 
-    <!-- Features Modal Popup -->
-    <div id="featuresModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 data-en="✨ Why Choose My Utsave? ✨" data-hi="✨ मेरे Utsave को क्यों चुनें? ✨">✨ Why Choose My Utsave? ✨
-            </h2>
-            <div class="features-scroll">
-                <div class="feature-item">
-                    <h3 data-en="🔍 Search Best Gardens & Banquet Halls"
-                        data-hi="🔍 सर्वश्रेष्ठ बागों और बैंक्वेट हॉल खोजें">🔍 Search Best Gardens & Banquet Halls</h3>
-                    <p data-en="Discover premium venues curated just for you. Browse through the best gardens and banquet halls in your city."
-                        data-hi="आपके लिए चयनित प्रीमियम स्थान खोजें। अपने शहर में सर्वश्रेष्ठ बागों और बैंक्वेट हॉल देखें।">
-                        Discover premium venues curated just for you. Browse through the best gardens and banquet halls
-                        in your city.</p>
-                </div>
-                <div class="feature-item">
-                    <h3 data-en="⏱️ Save Your Time" data-hi="⏱️ अपना समय बचाएं">⏱️ Save Your Time</h3>
-                    <p data-en="No more endless searching and visiting venues. Book your perfect venue in just a few clicks!"
-                        data-hi="अब और अंतहीन खोज नहीं। अपने आदर्श स्थान को कुछ क्लिकों में बुक करें!">No more endless
-                        searching and visiting venues. Book your perfect venue in just a few clicks!</p>
-                </div>
-                <div class="feature-item">
-                    <h3 data-en="📢 Instant Publicity" data-hi="📢 तुरंत प्रचार">📢 Instant Publicity</h3>
-                    <p data-en="Reach thousands of couples looking for perfect venues. Get maximum visibility for your events."
-                        data-hi="हजारों जोड़ों तक पहुंचें जो सही स्थान ढूंढ रहे हैं। अपने आयोजनों के लिए अधिकतम दृश्यता प्राप्त करें।">
-                        Reach thousands of couples looking for perfect venues. Get maximum visibility for your events.
-                    </p>
-                </div>
-                <div class="feature-item">
-                    <h3 data-en="✅ Verified Venues" data-hi="✅ सत्यापित स्थान">✅ Verified Venues</h3>
-                    <p data-en="All our venues are verified and trusted. Host your dream event with complete peace of mind."
-                        data-hi="हमारे सभी स्थान सत्यापित और विश्वस्त हैं। पूर्ण मानसिक शांति के साथ अपने स्वप्न का कार्यक्रम आयोजित करें।">
-                        All our venues are verified and trusted. Host your dream event with complete peace of mind.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <script src="script.js"></script>
 </body>
