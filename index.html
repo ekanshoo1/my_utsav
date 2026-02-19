@@ -1,63 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <title>My Utsave</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bilingual Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Bilingual Website</h1>
-        <button id="lang-toggle">Switch Language</button>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home section of the website.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>This section contains information about us.</p>
-        </section>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>Details about our services can be found here.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch through this section.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 My Bilingual Website. All rights reserved.</p>
-    </footer>
-    <script>
-        const langToggle = document.getElementById('lang-toggle');
-        let currentLang = 'en';
 
-        langToggle.addEventListener('click', () => {
-            if (currentLang === 'en') {
-                document.documentElement.lang = 'es';
-                langToggle.textContent = 'Switch to English';
-                currentLang = 'es';
-                // Update content to Spanish (placeholder)
-                document.querySelector('#home h2').textContent = 'Inicio';
-                document.querySelector('#about h2').textContent = 'Sobre nosotros';
-                document.querySelector('#services h2').textContent = 'Nuestros servicios';
-                document.querySelector('#contact h2').textContent = 'Contáctenos';
-            } else {
-                document.documentElement.lang = 'en';
-                langToggle.textContent = 'Switch to Spanish';
-                currentLang = 'en';
-                // Update content to English
-                document.querySelector('#home h2').textContent = 'Home';
-                document.querySelector('#about h2').textContent = 'About Us';
-                document.querySelector('#services h2').textContent = 'Our Services';
-                document.querySelector('#contact h2').textContent = 'Contact Us';
-            }
-        });
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <span class="logo-my">✨ MY</span>
+                <span class="logo-utsave">UTSAVE</span>
+                <span class="logo-icon">🎉</span>
+            </div>
+            <div class="language-toggle">
+                <button onclick="changeLanguage('en')" class="lang-btn active" id="enBtn">English</button>
+                <button onclick="changeLanguage('hi')" class="lang-btn" id="hiBtn">हिंदी</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-en="Celebrate Your Special Moments" data-hi="अपने विशेष पलों का जश्न मनाएं">Celebrate Your Special
+                Moments</h1>
+            <p data-en="Premium Gardens & Banquet Halls Booking Platform"
+                data-hi="प्रीमियम बागों और बैंक्वेट हॉल बुकिंग प्लेटफॉर्म">Premium Gardens & Banquet Halls Booking
+                Platform</p>
+            <a href="#booking" class="hero-btn" data-en="Book Now" data-hi="अभी बुक करें">Book Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2 data-en="Why Choose My Utsave?" data-hi="मेरे Utsave को क्यों चुनें?">Why Choose My Utsave?</h2>
+        <p data-en="We help you find and book the best gardens and banquet halls easily. Hassle-free booking, verified venues, and smooth experience."
+            data-hi="हम आपको सर्वश्रेष्ठ बागों और बैंक्वेट हॉल ढूंढने और आसानी से बुक करने में मदद करते हैं।">We help
+            you find and book the best gardens and banquet halls easily.</p>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 data-en="✨ Why Choose My Utsave? ✨" data-hi="✨ मेरे Utsave को क्यों चुनें? ✨">✨ Why Choose My Utsave? ✨</h2>
+        <div class="features-container">
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">🔍</div>
+                <h3 data-en="Search Best Gardens & Banquet Halls" data-hi="🔍 सर्वश्रेष्ठ बागों और बैंक्वेट हॉल खोजें">
+                    🔍 Search Best Gardens & Banquet Halls</h3>
+                <p data-en="Discover premium venues curated just for you. Browse through the best gardens and banquet halls in your city."
+                    data-hi="आपके लिए चयनित प्रीमियम स्थान खोजें। अपने शहर में सर्वश्रेष्ठ बागों और बैंक्वेट हॉल देखें।">
+                    Discover premium venues curated just for you. Browse through the best gardens and banquet halls in
+                    your city.</p>
+            </div>
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">⏱️</div>
+                <h3 data-en="Save Your Time" data-hi="⏱️ अपना समय बचाएं">⏱️ Save Your Time</h3>
+                <p data-en="No more endless searching and visiting venues. Book your perfect venue in just a few clicks!"
+                    data-hi="अब और अंतहीन खोज नहीं। अपने आदर्श स्थान को कुछ क्लिकों में बुक करें!">No more endless
+                    searching and visiting venues. Book your perfect venue in just a few clicks!</p>
+            </div>
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">📢</div>
+                <h3 data-en="Instant Publicity" data-hi="📢 तुरंत प्रचार">📢 Instant Publicity</h3>
+                <p data-en="Reach thousands of couples looking for perfect venues. Get maximum visibility for your events."
+                    data-hi="हजारों जोड़ों तक पहुंचें जो सही स्थान ढूंढ रहे हैं। अपने आयोजनों के लिए अधिकतम दृश्यता प्राप्त करें।">
+                    Reach thousands of couples looking for perfect venues. Get maximum visibility for your events.</p>
+            </div>
+            <div class="feature-card scroll-animate">
+                <div class="feature-icon">✅</div>
+                <h3 data-en="Verified Venues" data-hi="✅ सत्यापित स्थान">✅ Verified Venues</h3>
+                <p data-en="All our venues are verified and trusted. Host your dream event with complete peace of mind."
+                    data-hi="हमारे सभी स्थान सत्यापित और विश्वस्त हैं। पूर्ण मानसिक शांति के साथ अपने स्वप्न का कार्यक्रम आयोजित करें।">
+                    All our venues are verified and trusted. Host your dream event with complete peace of mind.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues Section -->
+    <section class="venues">
+        <div class="venue-card scroll-animate">
+            <img src="garden.jpg" alt="Garden">
+            <h3 data-en="Luxury Gardens" data-hi="विलासितापूर्ण बागान">Luxury Gardens</h3>
+            <p data-en="Perfect for weddings & outdoor celebrations."
+                data-hi="शादियों और बाहरी समारोहों के लिए परिपूर्ण।">Perfect for weddings & outdoor celebrations.</p>
+            <button onclick="selectVenue('Garden')" data-en="Book Garden" data-hi="बाग बुक करें">Book Garden</button>
+        </div>
+
+        <div class="venue-card scroll-animate">
+            <img src="banquet.jpg" alt="Banquet">
+            <h3 data-en="Royal Banquet Halls" data-hi="शाही बैंक्वेट हॉल">Royal Banquet Halls</h3>
+            <p data-en="Elegant indoor halls for grand events."
+                data-hi="भव्य कार्यक्रमों के लिए सुरुचिपूर्ण इनडोर हॉल।">Elegant indoor halls for grand events.</p>
+            <button onclick="selectVenue('Banquet Hall')" data-en="Book Banquet" data-hi="बैंक्वेट बुक करें">Book
+                Banquet</button>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking" id="booking">
+        <h2 data-en="Reserve Your Venue" data-hi="अपना स्थान सुरक्षित करें">Reserve Your Venue</h2>
+
+        <form id="bookingForm">
+            <input type="text" placeholder="Full Name" data-en-placeholder="Full Name" data-hi-placeholder="पूरा नाम"
+                required>
+            <input type="tel" placeholder="Mobile Number" data-en-placeholder="Mobile Number"
+                data-hi-placeholder="मोबाइल नंबर" required>
+
+            <select id="venueType" required>
+                <option value="">Select Venue</option>
+                <option value="Garden" data-en="Garden" data-hi="बाग">Garden</option>
+                <option value="Banquet Hall" data-en="Banquet Hall" data-hi="बैंक्वेट हॉल">Banquet Hall</option>
+            </select>
+
+            <input type="date" required>
+            <input type="number" placeholder="Number of Guests" data-en-placeholder="Number of Guests"
+                data-hi-placeholder="अतिथियों की संख्या" required>
+
+            <button type="submit" data-en="Confirm Booking" data-hi="बुकिंग की पुष्टि करें">Confirm Booking</button>
+        </form>
+
+        <div id="successMessage"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 data-en="Get In Touch" data-hi="हमसे संपर्क करें">Get In Touch</h2>
+            <div class="contact-details">
+                <div class="contact-card">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:+919243108170">+91 9243108170</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3>💬 WhatsApp</h3>
+                    <p><a href="https://wa.me/919243108170" target="_blank">Message Us on WhatsApp</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 My Utsave | Made in India 🇮🇳</p>
+            <p class="contact-info">📞 Contact: <a href="tel:+919243108170">+91 9243108170</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-container">
+        <a href="https://wa.me/919243108170" class="whatsapp" target="_blank">
+            💬
+        </a>
+        <div class="whatsapp-tooltip">Click here for WhatsApp Group</div>
+    </div>
+
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
