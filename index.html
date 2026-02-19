@@ -3,58 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Utsav</title>
+    <title>Bilingual Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#venues">Venues</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <header id="hero">
-        <h1>Welcome to My Utsav!</h1>
-        <p>Your perfect event starts here.</p>
+    <header>
+        <h1>Welcome to My Bilingual Website</h1>
+        <button id="lang-toggle">Switch Language</button>
     </header>
-    <section id="features">
-        <h2>Features</h2>
-        <div class="feature-item">
-            <h3>Feature 1</h3>
-            <p>Description of feature 1.</p>
-        </div>
-        <div class="feature-item">
-            <h3>Feature 2</h3>
-            <p>Description of feature 2.</p>
-        </div>
-    </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Information about the company.</p>
-    </section>
-    <section id="venues">
-        <h2>Our Venues</h2>
-        <p>Details about the venues available.</p>
-    </section>
-    <section id="booking">
-        <h2>Book Your Event</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="date">Date:</label>
-            <input type="date" id="date" name="date" required>
-            <input type="submit" value="Book Now">
-        </form>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Get in touch!</p>
-    </section>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>This is the home section of the website.</p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>This section contains information about us.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Details about our services can be found here.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch through this section.</p>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2026 My Utsav. All rights reserved.</p>
+        <p>&copy; 2026 My Bilingual Website. All rights reserved.</p>
     </footer>
+    <script>
+        const langToggle = document.getElementById('lang-toggle');
+        let currentLang = 'en';
+
+        langToggle.addEventListener('click', () => {
+            if (currentLang === 'en') {
+                document.documentElement.lang = 'es';
+                langToggle.textContent = 'Switch to English';
+                currentLang = 'es';
+                // Update content to Spanish (placeholder)
+                document.querySelector('#home h2').textContent = 'Inicio';
+                document.querySelector('#about h2').textContent = 'Sobre nosotros';
+                document.querySelector('#services h2').textContent = 'Nuestros servicios';
+                document.querySelector('#contact h2').textContent = 'Contáctenos';
+            } else {
+                document.documentElement.lang = 'en';
+                langToggle.textContent = 'Switch to Spanish';
+                currentLang = 'en';
+                // Update content to English
+                document.querySelector('#home h2').textContent = 'Home';
+                document.querySelector('#about h2').textContent = 'About Us';
+                document.querySelector('#services h2').textContent = 'Our Services';
+                document.querySelector('#contact h2').textContent = 'Contact Us';
+            }
+        });
+    </script>
 </body>
 </html>
